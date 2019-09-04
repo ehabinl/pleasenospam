@@ -1,6 +1,5 @@
 const router = require('koa-router')();
 const config = require('config');
-const generateName = require('sillyname');
 const email = require('./controllers/email');
 const sse = require('./controllers/sse');
 
@@ -8,7 +7,7 @@ router.get('/', async(ctx) => {
 	await ctx.render('index', {
 		pretty: config.app.prettyHtml,
 		title: ' Disposal email',
-		defaultAddress: generateName().replace(' ', '-').toLowerCase() + '@' + config.mail.domains[Math.floor(Math.random() * config.mail.domains.length)],
+		defaultAddress: 'ehakawati@' + config.mail.domains[Math.floor(Math.random() * config.mail.domains.length)],
 		domains: config.mail.domains
 	});
 });
