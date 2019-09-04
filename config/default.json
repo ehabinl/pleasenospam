@@ -1,6 +1,6 @@
 {
   "app": {
-    "port": 3000,
+    "port": 80,
     "cacheAge": 86400,
     "prettyHtml": true,
     "keys": [
@@ -20,11 +20,10 @@
   "mail": {
     "host": "0.0.0.0",
     "port": 25,
-    "hostname": "pleasenospam",
+    "hostname": "disposal.winstaging.com",
     "banner": "Hi can I have some mail please?",
     "domains": [
-      "localhost",
-      "pleasenospam.email"
+      "disposal.winstaging.com"
     ]
   }
 }

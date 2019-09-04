@@ -9,10 +9,9 @@
     "host": "db"
   },
   "mail": {
-    "hostname": "pleasenospam.email",
+    "hostname": "disposal.winstaging.com",
     "domains": [
-      "pleasenospam.email",
-      "spamlessmail.org"
+      "disposal.winstaging.com"
     ]
   }
 }

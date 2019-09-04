@@ -3,6 +3,7 @@ services:
   app:
     image: node:latest
     command: "npm start"
+    #command: "npm run watch"
     working_dir: /app
     links:
      - mail
@@ -12,7 +13,7 @@ services:
     volumes:
      - .:/app
     ports:
-     - "3000:80"
+     - "80:80"
   mail:
     image: node:latest
     command: "npm run mail-server"
@@ -26,7 +27,7 @@ services:
     expose:
      - 25
     ports:
-     - "2525:25"
+     - "25:25"
   db:
     image: rethinkdb:latest
     volumes:
