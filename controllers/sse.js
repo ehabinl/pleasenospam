@@ -4,7 +4,7 @@ const sseTransform = require('../lib/sse-transform');
 module.exports = {
 	subscribe(ctx) {
 		ctx.compress = false;
-		ctx.req.setTimeout(Number.MAX_VALUE);
+		ctx.req.setTimeout(Number.MAX_SAFE_INTEGER);
 		ctx.type = 'text/event-stream; charset=utf-8';
 		ctx.set('Cache-Control', 'no-cache');
 		ctx.set('Connection', 'keep-alive');
